@@ -8,7 +8,7 @@ const cors = require('cors');
 var cats = [{name:'Lily'}, {name: 'Lucy'}];
 
 var corOptions = {
-    origin: 'http://localhost:4200',
+    origin: '*',
     optionsSuccessStatus: 200
 };
 app.use(cors(corOptions));

@@ -12,7 +12,7 @@ var corOptions = {
     optionsSuccessStatus: 200
 };
 app.use(cors(corOptions));
-app.listen(3000,() =>{
+app.listen('https://firstnodeapp1.azurewebsites.net',() =>{
     console.log('Server started :)');
 });
 app.route('/api/cats').get((req, res) =>{

@@ -6,13 +6,14 @@ const bodyparser = require('body-parser');
 const cors = require('cors');
 
 var cats = [{name:'Lily'}, {name: 'Lucy'}];
+var port = process.env.PORT || 1337;
 
 var corOptions = {
     origin: '*',
     optionsSuccessStatus: 200
 };
 app.use(cors(corOptions));
-app.listen('https://firstnodeapp1.azurewebsites.net',() =>{
+app.listen(port,() =>{
     console.log('Server started :)');
 });
 app.route('/api/cats').get((req, res) =>{
@@ -48,7 +49,6 @@ app.route('/api/cats').delete((req,res) =>{
 
 // });
 
-// var port = process.env.PORT || 1337;
 // server.listen(port);
 
 console.log("Server is running...");
